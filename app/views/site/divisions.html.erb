@@ -1,0 +1,46 @@
+
+	
+	<head>
+<title> Ajax </title>
+<script type="text/javascript">
+var XMLHttpRequestObject = false;
+if (window.XMLHttpRequest) {
+XMLHttpRequestObject = new XMLHttpRequest();
+} else if (window.ActiveXObject) {
+XMLHttpRequestObject =
+new ActiveXObject("Microsoft.XMLHTTP");
+}
+function getData(datasource, divID) {
+if (XMLHttpRequestObject) {
+var obj = document.getElementById(divID);
+XMLHttpRequestObject.open("GET", datasource, true);
+XMLHttpRequestObject.onreadystatechange = function () {
+if (XMLHttpRequestObject.readyState == 4
+&& XMLHttpRequestObject.status == 200) {
+obj.innerHTML = XMLHttpRequestObject.responseText;
+}
+}
+XMLHttpRequestObject.send(null);
+}
+}
+</script>
+</head>
+
+
+<body>
+<h1> See which division</h1>
+
+<div id="targetDiv">
+<p>
+<table>
+<tr>
+<td><img src="assets/examples/huckers.jpg"
+onmouseover="getData('huckers.txt','ajaxDesc')"/></td>
+<td><img src="assets/examples/jabba.jpg"
+onmouseover="getData('hunks.txt','ajaxDesc')"/></td>
+</table>
+<div id="ajaxDesc"> </div>
+</p>
+</div>
+</body>
+	

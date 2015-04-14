@@ -1,0 +1,33 @@
+<h1>Players in <%= @team.team_name %></h1> 
+<table> 
+	<tr> 
+		<th>Player name |</th> 
+		<th>College |</th> 
+		<th>Number</th> 
+	</tr> 
+		<% for player in @players %> 
+			<tr> 
+				<td>
+					<%= player.player_name %>
+				</td> |
+				<td>
+					<%= player.college %>
+				</td> |
+				<td>
+					<%= player.number %>
+				</td> 
+				<td>
+					<%= link_to 'Show', team_player_path(@team, player) %>
+				</td> 
+				<td>
+					<%= link_to 'Edit', edit_team_player_path(@team, player) %>
+				</td> 
+				<td>
+					<%= link_to 'Destroy', team_player_path(@team, player), :confirm => 'Are you sure?', :method => :delete %>
+				</td> 
+			</tr>
+		<% end %> 
+</table> 
+<br /> 
+	<%= link_to 'New player', new_team_player_path(@team) %> 
+	<%= link_to 'Back to Team', @team %>

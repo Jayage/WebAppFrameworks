@@ -1,0 +1,19 @@
+<p>
+  <b>Team name:</b>
+  <%= @team.team_name %>
+</p>
+
+	
+	<!-- Display items of an order --> 
+	<h2>Players</h2> 
+	<% @team.players.each do |player| %> 
+			<p> 
+				<b>Player name:</b> 
+				<%= player.player_name %> 
+			</p> 
+	<% end %>
+
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %> | 
+<%= link_to 'Show Players', team_players_path(@team) %>

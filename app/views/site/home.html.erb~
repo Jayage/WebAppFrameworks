@@ -1,0 +1,53 @@
+<script>
+var name = prompt("What is your name?");
+alert("Welcome " + name);
+</script>
+<div class="container1">
+	<div class="row">
+		<div class="sixcol">
+			<h1 class="logo">Jabba the Huck</h1>
+		</div>
+		<div class="onecol nav">
+		<a href="/home" class="menu"><div class="link">Home</div></a>
+		</div>
+		<div class="onecol nav">
+		<a href="/about" class="menu"><div class="link">About</div></a>
+		</div>
+		<div class="onecol nav">
+		<a href="/divisions" class="menu"><div class="link">Divisions</div></a>
+		</div>
+		<div class="onecol nav">
+		<a href="/media" class="menu"><div class="link">Media</div></a>
+		</div>
+		<div class="onecol nav last">
+		<a href="/teams" class="menu"><div class="link">Team</div></a>
+		</div>
+		
+	</div>
+	</div><hr />
+	
+	<div class="banner">
+    <ul>
+        <li><a href="assets/examples/nats.jpg"><img src="assets/examples/nats.jpg" /></a></li>
+        <li><a href="assets/examples/champs.jpg"><img src="assets/examples/champs.jpg" /></a></li>
+        <li><a href="assets/examples/mixednats.jpg"><img src="assets/examples/mixednats.jpg" /></a></li>
+    </ul>
+</div>
+	
+	<script>
+    var unslider = $('.banner').unslider();
+    
+    $('.unslider-arrow').click(function() {
+        var fn = this.className.split(' ')[1];
+        
+        //  Either do unslider.data('unslider').next() or .prev() depending on the className
+        unslider.data('unslider')[fn]();
+    });
+</script>
+<script>
+// Fart every 400 pixels scrolled
+fartscroll(); 
+
+// Fart every 800 pixels scrolled
+fartscroll(800);
+</script>

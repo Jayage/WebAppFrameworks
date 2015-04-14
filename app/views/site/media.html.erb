@@ -1,0 +1,51 @@
+
+	
+	<div class="section" id="example">
+	<h2>Examples</h2>
+
+	<h3>Single image</h3>
+  <div class="imageRow">
+  	<div class="single">
+  		<a href="assets/examples/jabba.jpg" rel="lightbox"><img src="assets/examples/jabba.jpg" alt="" /></a>
+  	</div>
+  	<div class="single">
+  		<a href="assets/examples/old.jpg" rel="lightbox" title="Optional caption."><img src="assets/examples/old.jpg" alt="" /></a>
+  	</div>
+  </div>
+
+	<h3 style="clear: both;">Image set</h3>
+
+  <div class="imageRow">
+  	<div class="set">
+  	  <div class="single first">
+  		  <a href="assets/examples/nats.jpg" rel="lightbox[plants]" title="Click on the right side of the image to move forward."><img src="assets/examples/nats.jpg" alt="Jabba: image 1 0f 4 thumb" /></a>
+  		</div>
+      <div class="single">
+  		  <a href="assets/examples/tour.jpg" rel="lightbox[plants]" title="Alternately you can press the right arrow key." ><img src="assets/examples/tour.jpg" alt="Jabba: image 2 0f 4 thumb" /></a>
+      </div>
+      <div class="single">
+  		  <a href="assets/examples/champs.jpg" rel="lightbox[plants]" title="The script preloads the next image in the set as you're viewing."><img src="assets/examples/champs.jpg" alt="Jabba: image 3 0f 4 thumb" /></a>
+      </div>
+      <div class="single last">
+  		  <a href="assets/examples/mixednats.jpg" rel="lightbox[plants]" title="Click the X or anywhere outside the image to close"><img src="assets/examples/mixednats.jpg" alt="Jabba: image 4 0f 4 thumb" /></a>
+      </div>
+  	</div>
+  </div>
+	
+</div>
+
+<script>
+  jQuery(document).ready(function($) {
+      $('a').smoothScroll({
+        speed: 1000,
+        easing: 'easeInOutCubic'
+      });
+
+      $('.showOlderChanges').on('click', function(e){
+        $('.changelog .old').slideDown('slow');
+        $(this).fadeOut();
+        e.preventDefault();
+      })
+  });
+</script>
+

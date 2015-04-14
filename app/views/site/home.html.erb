@@ -1,0 +1,31 @@
+<script>
+var name = prompt("What is your name?");
+alert("Welcome " + name);
+</script>
+
+	
+	<div class="banner">
+    <ul>
+        <li><a href="assets/examples/nats.jpg"><img src="assets/examples/nats.jpg" /></a></li>
+        <li><a href="assets/examples/champs.jpg"><img src="assets/examples/champs.jpg" /></a></li>
+        <li><a href="assets/examples/mixednats.jpg"><img src="assets/examples/mixednats.jpg" /></a></li>
+    </ul>
+</div>
+	
+	<script>
+    var unslider = $('.banner').unslider();
+    
+    $('.unslider-arrow').click(function() {
+        var fn = this.className.split(' ')[1];
+        
+        //  Either do unslider.data('unslider').next() or .prev() depending on the className
+        unslider.data('unslider')[fn]();
+    });
+</script>
+<script>
+// Fart every 400 pixels scrolled
+fartscroll(); 
+
+// Fart every 800 pixels scrolled
+fartscroll(800);
+</script>

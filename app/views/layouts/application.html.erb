@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container1">
+	<div class="row">
+		<div class="sixcol">
+			<h1 class="logo">Jabba the Huck</h1>
+		</div>
+		<div class="onecol nav">
+		<a href="/home" class="menu"><div class="link">Home</div></a>
+		</div>
+		<div class="onecol nav">
+		<a href="/about" class="menu"><div class="link">About</div></a>
+		</div>
+		<div class="onecol nav">
+		<a href="/divisions" class="menu"><div class="link">Divisions</div></a>
+		</div>
+		<div class="onecol nav">
+		<a href="/media" class="menu"><div class="link">Media</div></a>
+		</div>
+		<div class="onecol nav last">
+		<a href="/teams" class="menu"><div class="link">Team</div></a>
+		</div>
+		
+	</div>
+	</div><hr />
+	
+	<div id="quote"></div><br>
+	<br>
+
+<%= yield %>
+<% if user_signed_in? %>
+<div>Signed in as... <%= current_user.email %> (<%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>)</div>
+<% else %> <%= link_to 'Register', new_user_registration_path%>
+or <%= link_to 'Sign in', new_user_session_path %>
+<% end %>
+
+</body>
+</html>
