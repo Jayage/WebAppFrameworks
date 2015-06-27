@@ -1,0 +1,16 @@
+
+
+Introduction
+The main idea behind my project was to create relationships between the players and teams of the Irish Ultimate community and show the history behind each tournament in Ireland. It was also going to be used for a reference to who was a member of which team, at any given stage in their Ultimate life span, and also which team has won which tournament, and how many medals each individual has won.
+Following that I had introduced a blog post to the web application. So that users can submit details on who has won what awards, so that the web application can be used in the future.
+
+
+Gems
+For this project I’ve created a gem that scans text that is entered into a blog and checks it for and bad language. The gem was created and pushed to the ruby gems website. 
+Other gems that have been included in the making of the project was the devise login gem. This is a basic login system, making users register and login to the website. This is done because there are some elements of the website that users can alter for example blog posts.
+
+
+Conclusions
+In the end I don’t think I had achieved what I wanted to achieve. This was due to my lack of understanding of how relationships worked in the rails framework. 
+I feel that if I had some more time that I would have had a better understanding of relationships and hopefully would have a better outcome. 
+
